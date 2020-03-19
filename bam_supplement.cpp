@@ -519,6 +519,7 @@ int bam_iter_read(bamFile fp, bam_iter_t iter, bam1_t *b) {
 			}
 			if(iter->i >= 0) {// otherwise bug
 				assert(iter->curr_off >= iter->off[iter->i].v); // == --> >=
+//				assert(iter->curr_off == iter->off[iter->i].v); // original
 			}
 			if(iter->i < 0 || iter->off[iter->i].v != iter->off[iter->i+1].u) { // not adjacent chunks; then seek
 				bam_seek(fp, iter->off[iter->i+1].u, SEEK_SET);

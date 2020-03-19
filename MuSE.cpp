@@ -198,7 +198,7 @@ int StringToInt(const std::string& s) {
 #define FALSE      0
 #define give_log   log_p
 #define ISNAN(x)   isnan(x)
-#define FINITE(x)  isfinite(x)
+#define FINITE(x)  std::isfinite(x)
 #define ML_NAN     NAN
 #define ML_NEGINF -INFINITY
 #define ML_POSINF  INFINITY
